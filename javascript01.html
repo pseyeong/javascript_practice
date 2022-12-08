@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 1일차</title>
+
+    <script>
+        var id = "love";
+        var pw = "1234";
+
+        var id_01 = prompt("아이디를 입력하세요.","");
+        
+        if(id == id_01){
+            var pw_01 = prompt("패스워드를 입력하세요.","0");
+
+            if(pw == pw_01){
+                document.write(id_01 + "님 안녕하세요.");
+            }else{
+                alert("패스워드가 일치하지 않습니다.\r다시 작성하세요.");
+                location.reload();
+            }
+        }else{
+            alert("아이디가 일치하지 않습니다.\r다시 작성하세요.");
+            location.reload();
+
+        }
+        
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
