@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수학객체</title>
+
+    <script>
+        /*var num = 2.1234;
+
+        var maxNum = Math.max(10, 5, 7, 3),
+        minNum = Math.min(20, 3, 5, 7, 30),
+        roundNum = Math.round(num),
+        floorNum = Math.floor(num),
+        rndNum = Math.random(),
+        piNum = Math.PI;
+
+        document.write(maxNum,"<br/>");
+        document.write(minNum,"<br/>");
+        document.write(roundNum,"<br/>");
+        document.write(floorNum,"<br/>");
+        document.write(rndNum,"<br/>");
+        document.write(piNum,"<br/>");*/
+
+        /*가위바위보 추측*/
+
+        document.write("<h1>컴퓨터 가위, 바위, 보 맞추기</h1>");
+
+        var game = prompt("가위, 바위, 보 중 선택하세요.","가위");
+        var gameNum;
+        switch(game){
+            case "가위" : gameNum = 1; break;
+            case "바위" : gameNum = 2; break;
+            case "보" : gameNum = 3; break;
+
+            default: alert("잘못 작성하였습니다.");
+            location.reload();
+
+        }
+
+        var com = Math.ceil(Math.random()*3);
+
+        document.write(com);
+
+        if(gameNum == com){
+            document.write("잘 맞췄습니다!");
+        }else{
+            document.write("틀렸습니다!");
+        };
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
