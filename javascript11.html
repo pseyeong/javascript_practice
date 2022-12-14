@@ -15,8 +15,14 @@
         console.log(t.replace("HELLO","BYE"));/*왼쪽부터 일치하는 문자 찾아서 변경할 문자로 바꿈*/
         console.log(t.search("HH"));/*왼쪽부터 찾을 문자와 일치하는 문자를 찾아 제일 먼저 일치하는 인덱스 번호를 반환*/
         console.log(t.slice(3,7));/*slice(a,b) a개 ~ b개까지 문자를 자른 후 반환 b는 포함x // -1은 뒤에서부터 첫번째 글자를 가리킨다*/
-        console.log(t.substring(5,-5)); /*a 인덱스부터 b 인덱스 이전 구간의 문자를 반환*/
+        console.log(t.substr(5,4));/*인덱스 5부터 네글자를 가져옴*/
         
+        var i = t.split("Y"); /*지정한 문자를 기준으로 문자 데이터를 나눠서 배열에 저장 후 반환*/
+        console.log(i);
+
+        
+
+
 
     </script>
 </head>
