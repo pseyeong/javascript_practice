@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #theBody{height:100vh;width:100%;display:inline-block;}
+    </style>
+
+    <script>
+        var color = ["purple",'yellow',"aqua","black","green"];
+        var color2 = ["white",'blue',"red","aqua","yellow"];
+
+        var i = 0;
+
+        function changeColor(){
+            i++;
+            if(i >= color.length){
+                i=0;
+            }
+
+            var bodyTag = document.getElementById("theBody");
+            bodyTag.style.backgroundColor = color[i];
+            bodyTag.style.color = color2[i];
+        }
+
+        function myFnc(name, area){
+            document.write("안녕하세요." + name + "입니다.", "<br/>");
+            document.write("사는 곳은" + area + "입니다.", "<br/>");
+        }
+        myFnc("홍길동","서울");
+
+        myFnc("심청이","경기");
+    </script>
+</head>
+<body>
+    <div id="theBody">
+        <button onclick="changeColor();">배경색 바꾸기</button>
+        <p class="txtColor">테스트 입니다. 테스트 입니다. 테스트 입니다. 테스트 입니다. 테스트 입니다. </p>
+    </div>
+    
+</body>
+</html>
