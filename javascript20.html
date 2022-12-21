@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = 1;
+        function gallery(direct){
+            if(direct){
+                if(num == 6) return;
+                num++;
+            }else{
+                if(num == 1) return;
+                num--;
+            }
+        
+            var imgTag = document.getElementById('photo');
+            imgTag.setAttribute("src","./images/test_img" + num + ".jpg");
+        
+        }
+
+
+
+    </script>
+    <style>
+        .img_box{height:600px;}
+    </style>
+</head>
+<body>
+    <div id="galleryZone">
+        <p class="img_box">
+            <img src="./images/test_img1.jpg" id="photo" alt=""/>
+        </p>
+        <div>
+            <button onclick="gallery(0)">이전</button>
+            <button onclick="gallery(1)">다음</button>
+        </div>
+    </div>
+</body>
+</html>
