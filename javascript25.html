@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    /*function song(title, writer, singer, released){
+        this.title = title;
+        this.writer = writer;
+        this.singer = singer;
+        this.released = new Date(released);
+        
+    }*/
+
+    class song {
+        constructor(title, writer, singer, released){
+            this.title = title;
+            this.writer = writer;
+            this.singer = singer;
+            this.released = new Date(released);
+        }
+
+        getReleaseDay(){
+            return this.released.getDay();
+        }
+
+        getSongInfo(){
+            return `제목 : ${this.title}, 작곡 : ${this.writer}, 가수 : ${this.singer}`;
+        }
+
+
+    }
+
+    
+
+    /*song.prototype.getReleaseDay = function(){
+        return this.released.getDay();
+    }
+
+    song.prototype.getSongInfo = function(){
+        return `제목 : ${this.title}, 작곡 : ${this.writer}, 가수 : ${this.singer}`;
+    }*/
+
+    //인스턴스
+    const song1 = new song('love yourself','eminem','eminem','1998-07-07');
+    const song2 = new song('hater','joe','joe','2015-1-22');
+
+    console.log(song1.getReleaseDay(), song2.getSongInfo()); 
+    
+    //console.log(song1, song2);
+    //console.log(song1.getReleaseDay());
+    //console.log(song1.getSongInfo());
+    
+    /*console.log(song1.getReleaseDay());
+    console.log(song2.getSongInfo());*/
+</script>
+</html>
