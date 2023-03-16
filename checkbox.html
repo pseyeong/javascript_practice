@@ -1,0 +1,22 @@
+checkbox js
+
+$("#pk_cmTableCheckAll").click(function(){
+        const checked = $(this).is(":checked");
+        if(checked){
+            $("input:checkbox[name='pk_cmTableCheck']").prop("checked", true);
+        }else{
+            $("input:checkbox[name='pk_cmTableCheck']").prop("checked", false);
+        }
+    });
+
+    $("input:checkbox[name='pk_cmTableCheck']").change(function(){
+        const pk_ch = $("input:checkbox[name='pk_cmTableCheck']:checked").length == $("input:checkbox[name='pk_cmTableCheck']").length;
+        if(pk_ch){
+            $('#pk_cmTableCheckAll').prop("checked", true);
+            console.log('1')
+        }else{
+            console.log('2');
+            $("#pk_cmTableCheckAll").prop("checked", false);
+        }
+
+    });
